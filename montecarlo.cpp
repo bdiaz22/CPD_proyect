@@ -1,4 +1,4 @@
-#include "./Material/RngStream.h"
+#include "RngStream/RngStream.h"
 #include <iostream>
 #include <cmath>
 #include <cstdlib>
