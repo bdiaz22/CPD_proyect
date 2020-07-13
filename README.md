@@ -7,5 +7,6 @@
 # Compilación
 
 ```bash
-g++ montecarlo RngStream/RngStream.cpp -g
+mpic++ montecarlo.cpp RngStream/RngStream.cpp RngStream/RngStreamSupp.cpp
+mpiexec -np 1 a.out
 ```
