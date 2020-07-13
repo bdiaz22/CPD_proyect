@@ -62,13 +62,13 @@ int main(){
 
     for(int i = (N/numThreads)*rank; i < (N/numThreads)*(rank+1); i++){
       randomValues[i] = fmod(myRngStream.RandU01()*100,upperLimit);
-    }
+    }  
 
     for(int i = (N/numThreads)*rank; i < (N/numThreads)*(rank+1); i++){
       localTotal += func(randomValues[i]);
     }
 
-    MPI_Reduce(&localTotal,&globalTotal,1,MPI_DOUBLE,MPI_SUM,0,MPI_COMM_WORLD);
+ MPI_Reduce(&localTotal,&globalTotal,1,MPI_DOUBLE,MPI_SUM,0,MPI_COMM_WORLD);
     if(rank == 0){;
       answer += (upperLimit - lowerLimit)/(double)N * globalTotal;
     }
