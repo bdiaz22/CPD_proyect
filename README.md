@@ -7,5 +7,5 @@
 # Compilación
 
 ```bash
-g++ montecarlo RngStream/RngStream.cpp -g
+g++ montecarlo RngStream/RngStream.cpp -g -fopenmp
 ```
